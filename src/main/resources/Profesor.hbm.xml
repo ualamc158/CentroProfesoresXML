@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="model">
+    <class name="Profesor" table="PROFESORES">
+        <id name="codProf" column="COD_PROF" type="integer">
+            <generator class="assigned"/>
+        </id>
+        <property name="nombreApe" column="NOMBRE_APE" type="string"/>
+        <property name="fechaNac" column="FECHA_NAC" type="date"/>
+        <property name="sexo" column="SEXO" type="string"/>
+
+        <many-to-one name="especialidad" class="Especialidad" column="ESPECIALIDAD"/>
+        <many-to-one name="centro" class="Centro" column="COD_CENTRO"/>
+
+        <many-to-one name="jefe" class="Profesor" column="COD_PROF1"/>
+
+        <set name="asignaturas" table="ASIGPROF">
+            <key column="PROFESORES_COD_PROF"/>
+            <many-to-many column="ASIGNATURAS_COD_ASIG" class="Asignatura"/>
+        </set>
+    </class>
+</hibernate-mapping>

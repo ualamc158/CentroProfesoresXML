@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="model">
+    <class name="Asignatura" table="ASIGNATURAS">
+        <id name="codAsig" column="COD_ASIG" type="string">
+            <generator class="assigned"/>
+        </id>
+        <property name="nombreAsi" column="NOMBRE_ASI" type="string"/>
+
+        <set name="profesores" table="ASIGPROF" inverse="true">
+            <key column="ASIGNATURAS_COD_ASIG"/>
+            <many-to-many column="PROFESORES_COD_PROF" class="Profesor"/>
+        </set>
+    </class>
+</hibernate-mapping>

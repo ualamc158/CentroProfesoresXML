@@ -23,21 +23,51 @@ public class Main {
             opcion = Entrada.entero();
 
             switch (opcion) {
-                case 1: altaProfesor(); break;
-                case 2: bajaProfesor(); break;
-                case 3: informacionProfesor(); break;
-                case 4: listadoProfesores(); break;
-                case 5: altaCentro(); break;
-                case 6: bajaCentro(); break;
-                case 7: modificarDirectorCentro(); break;
-                case 8: listadoCentros(); break;
-                case 9: altaEspecialidad(); break;
-                case 10: bajaEspecialidad(); break;
-                case 11: modificarNombreEspecialidad(); break;
-                case 12: listadoEspecialidades(); break;
-                case 13: altaAsignatura(); break;
-                case 14: bajaAsignatura(); break;
-                case 15: listadoAsignaturasYProfesores(); break;
+                case 1:
+                    altaProfesor();
+                    break;
+                case 2:
+                    bajaProfesor();
+                    break;
+                case 3:
+                    informacionProfesor();
+                    break;
+                case 4:
+                    listadoProfesores();
+                    break;
+                case 5:
+                    altaCentro();
+                    break;
+                case 6:
+                    bajaCentro();
+                    break;
+                case 7:
+                    modificarDirectorCentro();
+                    break;
+                case 8:
+                    listadoCentros();
+                    break;
+                case 9:
+                    altaEspecialidad();
+                    break;
+                case 10:
+                    bajaEspecialidad();
+                    break;
+                case 11:
+                    modificarNombreEspecialidad();
+                    break;
+                case 12:
+                    listadoEspecialidades();
+                    break;
+                case 13:
+                    altaAsignatura();
+                    break;
+                case 14:
+                    bajaAsignatura();
+                    break;
+                case 15:
+                    listadoAsignaturasYProfesores();
+                    break;
                 case 0:
                     System.out.println("Saliendo del programa...");
                     break;
